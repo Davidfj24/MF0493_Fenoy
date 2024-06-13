@@ -1,6 +1,6 @@
 package ppal;
 
-
+// proyecto correcto 
 import java.sql.Connection;
 
 /**
@@ -11,7 +11,7 @@ public class ConexionBD {
 
 	/** Propiedades de la conexion */
 	// cambiar el dato para conectar a otra base de datos
-	private static String database="empresa";
+	private static String database="empresa"; //bbdd incorrecta
 	private static String usuario="root";
 	private static String contrasena="";
 	private static String url="jdbc:mariadb://localhost/"+database;
@@ -36,6 +36,7 @@ public class ConexionBD {
 		// Registrar el driver al proyecto. Previamente habra que haber
 		// añadido el driver al proyecto ( Build Path)
 		
+			// driver no añadido ni incorporado a la ruta
 			Class.forName("org.mariadb.jdbc.Driver");
 			
 			

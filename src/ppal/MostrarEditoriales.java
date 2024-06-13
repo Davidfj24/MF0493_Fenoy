@@ -6,10 +6,10 @@ public static void main(String[] args) {
 		
 		ConexionBD conexion = new ConexionBD();
 		
-		
+		// faltan importacione
 		System.out.println("Conectando a la base de datos...");
 		// Paso 1. Obtener la conexion
-		Connection con =conexion.getConexion();
+		Connection con =conexion.getConexion(); // conexion correcta
 		
 		//Objetos necesarios para hacer una consulta
 		Statement sentencia = null;
@@ -21,12 +21,13 @@ public static void main(String[] args) {
 			sentencia=con.createStatement();
 			
 			// Paso 3. Ejecutar sentencia
-			resultado=sentencia.executeQuery("select * from editoriales");
+			resultado=sentencia.executeQuery("select * from editoriales"); // consulta correcta
 			System.out.println("Anio\t Codigo Editorial\t Nombre");
 			
 			
 			// Paso 4. Recorrer el resultado
 			while(resultado.next()) {
+				// columns correctas
 				int codEditorial = resultado.getInt("codEditorial");
 				String nombre = resultado.getString("nombre");
 				int anio = resultado.getInt("anio");
@@ -54,12 +55,12 @@ public static void main(String[] args) {
 	}
 
 
-
+ 	// repo correcto, commit correcta
 
 
 		
 	}
 
 	
-	
+	// sobran llaves?
 }
